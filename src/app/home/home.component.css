@@ -1,0 +1,24 @@
+.bg-black{
+    background-color: #000000;
+    color: #000000;
+}
+.books{
+    margin-top: 10%;
+    background-color: darkgoldenrod;
+    box-shadow: -2px 2px 15px 0px saddlebrown;
+}
+.characters{
+    margin-top: 10%;
+    background-color: gray;
+    box-shadow: -2px 2px 15px 0px silver;
+}
+.houses{
+    background-color: rgb(178, 180, 53);
+    margin-top: 10%;
+    box-shadow: -2px 2px 15px 0px gold;
+}
+.clr{
+    border-top: 1px solid goldenrod;
+    margin-top: 10px;
+    color: goldenrod;
+}

@@ -1,0 +1,475 @@
+<div class="container-fluid bg-black">
+  <!--book starts-->
+  <div class="container bg-style" *ngIf="currentBook">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{currentBook.name}}</h2>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>isbn :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.isbn}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Authors :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.authors}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>No.Of Pages :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.numberOfPages}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Publisher :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.publisher}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Country :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.country}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Media Type :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.mediaType}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Released :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentBook.released | date}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h6 class="text-center">Characters</h6>
+      </div>
+      <div class="col-md-12 p-l-r">
+        <p> {{currentBook.characters}} </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12 p-l-r">
+        <h6 class="text-center">povCharacters</h6>
+      </div>
+      <div class="col-md-12">
+        <p> {{currentBook.povCharacters}} </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <a [routerLink]="['/home']"><button type="button" class="btn btn-dark">Home</button></a>
+      </div>
+    </div>
+
+  </div>
+  <!--book ends-->
+
+
+  <!--characters starts-->
+
+  <div class="container bg-style-char" *ngIf="currentCharacter">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{currentCharacter.name}}</h2>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Gender :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.gender}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Culture :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.curlture}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Born :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.born}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Died :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.died}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Titles :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.titles}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Aliases :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.aliases}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Father :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.father}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Mother :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.mother}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Spouse :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.spouse}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Allegiances :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.allegiances}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Books :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.books}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>povBooks :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.povBooks}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>TV Series :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.tvSeries}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-1">&nbsp;</div>
+      <div class="col-5 col-md-5">
+        <h6>Played By :</h6>
+      </div>
+      <div class="col-7 col-md-5">
+        <h6> {{currentCharacter.playedBy}} </h6>
+      </div>
+      <div class="col-12 col-md-1">&nbsp;</div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <a [routerLink]="['/home']"><button type="button" class="btn btn-dark">Home</button></a>
+      </div>
+    </div>
+    <!--characters ends-->
+
+  </div>
+  <!--houses starts-->
+  
+
+  <div class="container bg-style-house" *ngIf="currentHouse">
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>{{currentHouse.name}}</h2>
+        </div>
+      </div>
+      <hr>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Region :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.region}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Coat Of Arms :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.coatOfArms}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Words :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.words}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Titles :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.titles}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Seats :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.seats}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Current Lord :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.currentLord}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Heir :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.heir}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Overload :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.overload}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Founded :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.founded}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Founder :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.founder}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Died Out :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.diedOut}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Ancestral Weapons :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.ancestralWeapons}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-1">&nbsp;</div>
+        <div class="col-5 col-md-5">
+          <h6>Cadet Branches :</h6>
+        </div>
+        <div class="col-7 col-md-5">
+          <h6> {{currentHouse.cadetBranches}} </h6>
+        </div>
+        <div class="col-12 col-md-1">&nbsp;</div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <h6 class="text-center">Sworn Members</h6>
+        </div>
+        <div class="col-md-12 p-l-r">
+          <p> {{currentHouse.swornMembers}} </p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12 text-center">
+            <a [routerLink]="['/home']"><button type="button" class="btn btn-dark">Home</button></a>
+        </div>
+      </div>
+      
+</div> 
+<hr> 
+  <!--houses ends-->
+  <!-- Footer -->
+<footer class="page-footer font-small black">
+
+  <!-- Copyright -->
+  <div class="footer-copyright  text-center py-3 clr">
+      <p>© 2018 Copyright GameOfThrones</p>
+    </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</div>

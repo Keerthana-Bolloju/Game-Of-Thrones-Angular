@@ -1,0 +1,26 @@
+.bg-black{
+    background-color: #000000;
+    font-style: italic;
+    color: #000000;
+}
+.col-5.col-md-5{
+    padding-left: 10vw;
+}
+
+.clr{
+    border-top: 1px solid goldenrod;
+    color: goldenrod;
+}
+
+.bg-style{
+    background-color: darkgoldenrod;border-radius:10px;padding: 10vh 0;word-wrap: break-word;
+}
+.bg-style-char{
+    background-color: gray;border-radius:10px;padding: 10vh 0;word-wrap: break-word;
+}
+.bg-style-house{
+    background-color: rgb(178, 180, 53);border-radius:10px;padding: 10vh 0;word-wrap: break-word;
+}
+.p-l-r{
+    padding: 0 30px;
+}

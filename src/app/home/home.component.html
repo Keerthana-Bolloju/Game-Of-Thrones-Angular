@@ -1,0 +1,52 @@
+<div class="container-fluid bg-black">
+  <div class="container">
+    <div class="row text-center">
+      <div *ngFor="let info of allInfo" class="col-md-4">
+
+        <!--books start-->
+        <div *ngIf="info.isbn" class="card books">
+          <div class="card-body">
+            <h5 class="card-title">{{info.name}}</h5>
+            <p class="card-text"><b>Authors:</b>{{info.authors}}</p>
+            <p class="card-text"><b>Publishers:</b>{{info.publisher}}</p>
+            <a [routerLink]="['/books',info.url.split('books/').pop()]" class="btn btn-dark">Get Info</a>
+          </div>
+        </div>
+        <!--books end-->
+
+        <!--characters start-->
+        <div *ngIf="info.gender" class="card characters">
+          <div class="card-body">
+            <h5 class="card-title">{{info.name}}</h5>
+            <p class="card-text"><b>Gender: </b>{{info.gender}}</p>
+            <p class="card-text"><b>Aliases: </b>{{info.aliases}}</p>
+            <a [routerLink]="['/characters',info.url.split('characters/').pop()]" class="btn btn-dark">Get Info</a>
+          </div>
+        </div>
+        <!--characters end-->
+
+        <!--houses start-->
+        <div *ngIf="info.region" class="card houses">
+          <div class="card-body">
+            <h5 class="card-title">{{info.name}}</h5>
+            <p class="card-text"><b>Region: </b>{{info.region}}</p>
+            <p class="card-text"><b>Coat Of Arms: </b>{{info.coatOfArms}}</p>
+            <a [routerLink]="['/houses',info.url.split('houses/').pop()]" class="btn btn-dark">Get Info</a>
+          </div>
+        </div>
+        <!--houses end-->
+
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+<footer class="page-footer font-small black">
+
+  <!-- Copyright -->
+  <div class="footer-copyright  text-center py-3 clr">
+    <p>© 2018 Copyright GameOfThrones</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+</div>
