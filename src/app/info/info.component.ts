@@ -9,7 +9,7 @@ import { GotHttpService } from '../got-http.service';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent implements OnInit {
-  public currentBook = null;
+  public currentBook;
   public currentCharacter;
   public currentHouse;
 
@@ -23,23 +23,19 @@ export class InfoComponent implements OnInit {
     this.gotHttpService.getSingleBookInfo(bookId).subscribe(
       data =>{
         console.log("ngoninti books info called")
-        //console.log(data)
+        console.log(data)
         this.currentBook = data;
-        console.log(this.currentBook)
-        //for(let item in this.currentBook){
-         // if(this.currentBook[item]==""){
-          //  this.currentBook[item]="N/A"
-          //}
-       // }
+        for(let item in this.currentBook){
+          if(this.currentBook[item]==""){
+            this.currentBook[item]="N/A"
+          }
+        }
       },
       error=>{
         console.log("error occured")
         console.log(error.errorMessage)
       }
     );
-    console.log(this.currentBook)
-    
-        console.log("ngoninti books info called END")
 
     let characterId = this._route.snapshot.paramMap.get('characterId')
     this.gotHttpService.getSingleCharacterInfo(characterId).subscribe(
