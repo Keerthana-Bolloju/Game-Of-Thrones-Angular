@@ -9,7 +9,7 @@ import { GotHttpService } from '../got-http.service';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent implements OnInit {
-  public currentBook;
+  public currentBook = null;
   public currentCharacter;
   public currentHouse;
 
@@ -25,6 +25,7 @@ export class InfoComponent implements OnInit {
         console.log("ngoninti books info called")
         console.log(data)
         this.currentBook = data;
+        console.log(this.currentBook)
         for(let item in this.currentBook){
           if(this.currentBook[item]==""){
             this.currentBook[item]="N/A"
@@ -36,6 +37,7 @@ export class InfoComponent implements OnInit {
         console.log(error.errorMessage)
       }
     );
+    console.log(this.currentBook)
 
     let characterId = this._route.snapshot.paramMap.get('characterId')
     this.gotHttpService.getSingleCharacterInfo(characterId).subscribe(
